@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, Bookmark, Instagram, Menu, Search, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Bookmark, Instagram, Menu, Search, X } from 'lucide-react'
+import heroImage from './assets/Livrosbanner.jpg'
 import './style.css'
 
 const articles = [
@@ -57,12 +58,6 @@ function App() {
 
   return (
     <>
-      <div className="topline">
-        <span>UM CANTO PARA QUEM AMA LER</span>
-        <span className="topline-center">EDIÇÃO Nº 08 <span className="topline-dot">✳</span> AGOSTO, 2026</span>
-        <a href="#newsletter">RECEBA NOSSA CARTA <ArrowUpRight size={12} /></a>
-      </div>
-
       <header className="site-header">
         <a className="wordmark" href="#inicio" aria-label="Biblioblog, início">biblio<span>blog</span><i>.</i></a>
         <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Navegação principal">
@@ -83,18 +78,11 @@ function App() {
       <main id="inicio">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <div className="eyebrow"><span className="eyebrow-mark">✳</span> PALAVRAS PARA HABITAR</div>
             <h1 id="hero-title">Toda leitura<br />é um jeito de<br /><em>voltar pra casa.</em></h1>
-            <p>Um espaço para descobrir histórias, dividir ideias e encontrar companhia entre as páginas.</p>
-            <a href="#leituras" className="text-link">Explore nossas leituras <ArrowDownRight size={17} /></a>
-            <div className="hero-edition"><span>08</span><span>EDIÇÃO<br />DE AGOSTO</span><i></i></div>
           </div>
           <div className="hero-image-wrap">
-            <Photo id="photo-1519682337058-a94d519337bc" alt="Leitora sentada perto de uma janela iluminada, com um livro nas mãos" className="hero-image" />
-            <div className="image-caption"><span>01 / 04</span><span>UM TEMPO SÓ SEU</span></div>
-            <div className="hero-stamp"><BookOpen size={18} strokeWidth={1.5} /><span>LEIA<br />SEM PRESSA</span></div>
+            <img src={heroImage} alt="Banner de livros" className="hero-image" />
           </div>
-          <div className="hero-side-note">CULTIVANDO O PRAZER DA LEITURA DESDE 2021 <span>↓</span></div>
         </section>
 
         <section className="featured" id="ensaios">
