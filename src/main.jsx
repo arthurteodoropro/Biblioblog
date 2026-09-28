@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ArrowRight, ArrowUpRight, Bookmark, Instagram, Menu, Search, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Bookmark, Github, Linkedin, Menu, Search, X } from 'lucide-react'
 import heroImage from './assets/Livrosbanner.jpg'
 import './style.css'
 
@@ -79,6 +79,7 @@ function App() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
             <h1 id="hero-title">Toda leitura<br />é um jeito de<br /><em>voltar pra casa.</em></h1>
+            <blockquote className="hero-quote"><span aria-hidden="true">&quot;</span><p>Projeto destinado estritamente à composição de portfólio pessoal.</p></blockquote>
           </div>
           <div className="hero-image-wrap">
             <img src={heroImage} alt="Banner de livros" className="hero-image" />
@@ -139,9 +140,11 @@ function App() {
 
       <footer className="site-footer">
         <a className="wordmark footer-wordmark" href="#inicio">biblio<span>blog</span><i>.</i></a>
-        <span className="footer-note">FEITO COM CALMA E UMA PILHA DE LIVROS.</span>
-        <div className="footer-links"><a href="#sobre">Sobre nós</a><a href="#leituras">Arquivo</a><a href="#instagram" aria-label="Instagram"><Instagram size={17} /></a></div>
-        <span className="copyright">© 2026 BIBLIOBLOG</span>
+        <span className="copyright">Todos os direitos reservados à Arthur Teodoro</span>
+        <div className="footer-links">
+          <a href="https://www.linkedin.com/in/arthurteodorob/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
+          <a href="https://github.com/arthurteodoropro" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
+        </div>
       </footer>
     </>
   )
